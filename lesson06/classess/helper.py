@@ -1,4 +1,4 @@
-class Helper
+class Helper:
     def input_int_from_console(self):
         while True:
             try:

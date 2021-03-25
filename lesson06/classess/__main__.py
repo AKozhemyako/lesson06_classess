@@ -1,7 +1,11 @@
 from lesson06.classess.cat import Cat
+from lesson06.classess.helper import Helper
 
 if __name__ == '__main__':
     cat1 = Cat()
+    cat1.print()
+    food = Helper().input_int_from_console()
+    cat1.eat(food)
     cat1.print()
 
     cat2 = Cat("Tom2", 5, 5.5)
