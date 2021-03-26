@@ -1,3 +1,6 @@
+from lesson06.classess.helper import Helper
+
+
 class Mouse:
     def __init__(self, name="Jerry", year=1, weight=0.5):
         self.name = name
