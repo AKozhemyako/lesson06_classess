@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/chapter04_tasks" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/chapter07" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lesson01" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lesson02" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lesson5" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/pyhon03" vcs="Git" />
+  </component>
+</project>
