@@ -11,10 +11,10 @@ class Cat:
         return self.weight / 7
 
     def eat(self, food):
-        if (0<food<self.max_food_limit()):
-            self.weight+=food
+        if (0 < food < self.max_food_limit()):
+            self.weight += food
         else:
-            print("Error food not in range (", self.min_food_limit(), "-" ,self.max_food_limit(), ")" )
+            print("Error food not in range (", self.min_food_limit(), "-", self.max_food_limit(), ")")
 
 
     def print(self):
