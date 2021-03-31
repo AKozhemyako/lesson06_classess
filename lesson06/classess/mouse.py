@@ -16,7 +16,7 @@ class Mouse:
     def set_killer(self, killer):
         if self.get_weight()<=0:
             self.__killer = killer
-            print("bon appetito mister cat")
+            print("bon appetite mister cat")
         else:
             print(killer, "no body no killer")
 

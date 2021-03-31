@@ -33,8 +33,10 @@ if __name__ == '__main__':
     CatEatController(cat1).eat(3)
     print(cat1)
     mouse1.set_killer(cat2)
+    print(mouse1)
     CatEatController(cat1).eat_mouse(mouse1)
     print(mouse1)
+    CatEatController(cat1).eat_mouse(Mouse("Anonim", 0.5))
     print(cat1)
 
 

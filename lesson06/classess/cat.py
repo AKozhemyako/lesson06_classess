@@ -6,6 +6,7 @@ class Cat:
         self.__name = name
         self.__year = year
         self.__weight = weight
+        self.mouse_list = []
 
     def get_name(self):
         return self.__name
@@ -25,7 +26,7 @@ class Cat:
         return self.__weight
 
     def __str__(self):
-        return f"Cat: {self.get_name()}, {self.get_year()}, {self.get_weight()}"
+        return f"Cat: {self.get_name()}, {self.get_year()}, {self.get_weight()}, {self.mouse_list}"
 
 
 class CatDoctorController:
@@ -57,6 +58,7 @@ class CatEatController:
 
     def eat_mouse(self, mouse):
         self.eat(mouse.get_weight())
+        self.cat.mouse_list.append(mouse)
         mouse.set_weight(0)
         mouse.set_killer(self.cat)
 
