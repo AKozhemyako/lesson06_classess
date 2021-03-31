@@ -55,6 +55,11 @@ class CatEatController:
     def min_food_limit(self):
         return 0
 
+    def eat_mouse(self, mouse):
+        self.eat(mouse.get_weight())
+        mouse.set_weight(0)
+        mouse.set_killer(self.cat)
+
     def eat(self, food):
         if (self.min_food_limit() < food < self.max_food_limit()):
             self.cat.set_weight(self.cat.get_weight() + food)
@@ -65,6 +70,6 @@ class CatEatController:
 
     def eat_from_console(self):
         while True:
-            food = Helper().input_float_from_console()
+            food = input_float_from_console()
             if self.eat(food):
                 break

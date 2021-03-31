@@ -1,14 +1,18 @@
+from datetime import datetime
+
 from lesson06.classess.cat import *
 from lesson06.classess.mouse import Mouse
 
 if __name__ == '__main__':
+    now = datetime.now()
+
     cat1 = Cat()
-    cat1.set_weight()
+    cat1.set_weight(10.1)
     print(cat1)
 
-    cat_eating = CatEatController(cat1)
-    cat_eating.eat_from_console()
-    print(cat1)
+    #cat_eating = CatEatController(cat1)
+    #cat_eating.eat_from_console()
+    #print(cat1)
 
     cat_diag = CatDoctorController(cat1)
     cat_diag.diagnostic_age()
@@ -23,4 +27,14 @@ if __name__ == '__main__':
 
     mouse1 = Mouse("Jerry", 0.3)
     mouse1.print()
-    print(mouse1.__str__)
+    print(str(mouse1))
+    print(repr(mouse1))
+
+    CatEatController(cat1).eat(3)
+    print(cat1)
+    mouse1.set_killer(cat2)
+    CatEatController(cat1).eat_mouse(mouse1)
+    print(mouse1)
+    print(cat1)
+
+
