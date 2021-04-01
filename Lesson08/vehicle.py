@@ -11,6 +11,18 @@ class Vehicle:
         return f"{self.point}, {self.price}, {self.speed}, {self.year}"
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 class Plane(Vehicle):
     def __init__(self, point, price, speed, year, height, count_pass):
         super().__init__(point, price, speed, year)
@@ -20,16 +32,26 @@ class Plane(Vehicle):
     def __str__(self) -> str:
         return f"{super().__str__()}. {self.height}, {self.count_pass}"
 
+    def __repr__(self) -> str:
+        return f"Plane: {self.__str__()}"
+
 
 class Ship(Vehicle):
     def __int__(self, point, price, speed, year, port, count_pass):
         super().__int__(point, price, speed, year)
         self.port = port
         self.count_pass = count_pass
+    def __str__(self) -> str:
+        return f"{super().__str__()}. {self.port}, {self.count_pass}"
 
+    def __repr__(self) -> str:
+        return f"Ship: {self.__str__()}"
 
 class Car(Vehicle):
     def __int__(self, point, price, speed, year):
         super().__int__(point, price, speed, year)
 
+
+    def __repr__(self) -> str:
+        return f"Car: {self.__str__()}"
 
