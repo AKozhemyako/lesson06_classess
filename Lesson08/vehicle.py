@@ -15,7 +15,7 @@ from abc import ABC
 from Lesson08.coordinate import *
 
 class Passenger(metaclass=abc.ABCMeta):
-    def __init__(self, count_pass):
+    def __init__(self, count_pass, i, i1, i2):
         self.count_pass = count_pass
 
     @property
@@ -60,9 +60,10 @@ class Plane(Vehicle):
         print("Plane")
 
 
-class Ship(Vehicle):
+class Ship(Vehicle, Passenger):
     def __int__(self, point, price, speed, year, port, count_pass):
-        super().__int__(point, price, speed, year)
+        Vehicle.__int__(self, point, price, speed, year)
+        Passenger.__init__(self, count_pass, 200, 2000, 150)
         self.port = port
         self.count_pass = count_pass
 
