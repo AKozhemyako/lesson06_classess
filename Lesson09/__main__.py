@@ -20,6 +20,13 @@ def insert_author(author_id, author_name):
         cursor.execute(f"SELECT COUNT(*) FROM  Artist ");
     return cursor.fetchone()
 
+def delete_author(author_id, author_name):
+    with sqlite3.connect("Chinook_Sqlite.sqlite") as conn:
+        cursor = conn.cursor()
+        cursor.execute(f"DELETE FROM Artist VALUES({author_id}, '{author_name}')")
+        conn.commit()
+        cursor.execute(f"SELECT COUNT(*) FROM  Artist ");
+    return cursor.fetchone()
 
 
 if __name__ == "__main__":
@@ -28,3 +35,4 @@ if __name__ == "__main__":
     for row in result_list:
         print(row)
     print(insert_author(301, "Jakson"))
+    print(delete_author(author_id=, author_name=))
