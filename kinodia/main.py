@@ -17,25 +17,25 @@ class Main(tk.Frame):  # Создаем класс для нашего прил�
         btn_open_dialog.pack(side=tk.LEFT)
 
         self.tree = ttk.Treeview(self, columns=("ID", "Film name", "Year", "Genre", "Time", "Regessier", "Artist"),
-                                 height=15,
+                                 height=35,
                                  show="headings")  # Тот же виджет превью уже на основное окно и наши колонки что
-        # будем заполнять
-        self.tree.column("ID", width=25)  # , anchor=tk.CENTER)
-        self.tree.column("Film name", width=25)  # , anchor=tk.CENTER)
-        self.tree.column("Year", width=25)  # , anchor=tk.CENTER)
-        self.tree.column("Genre", width=25)  # , anchor=tk.CENTER)
-        self.tree.column("Time", width=25)  # , anchor=tk.CENTER)
-        self.tree.column("Regessier", width=25)  # , anchor=tk.CENTER)
-        self.tree.column("Artist", width=25)  # , anchor=tk.CENTER)
+                                                    # будем заполнять
+        self.tree.column("ID", width=45)  # , anchor=tk.CENTER)
+        self.tree.column("Film name", width=185)  # , anchor=tk.CENTER)
+        self.tree.column("Year", width=60)  # , anchor=tk.CENTER)
+        self.tree.column("Genre", width=60)  # , anchor=tk.CENTER)
+        self.tree.column("Time", width=60)  # , anchor=tk.CENTER)
+        self.tree.column("Regessier", width=145)  # , anchor=tk.CENTER)
+        self.tree.column("Artist", width=175)  # , anchor=tk.CENTER)
 
         # Присваиваем колонкам видимое название.
         self.tree.heading("ID", text="ID")
-        self.tree.heading("Film name", text="Название Фильма")
+        self.tree.heading("Film name", text="Название Фильма/Сериала")
         self.tree.heading("Year", text="Год")
         self.tree.heading("Genre", text="Жанр")
         self.tree.heading("Time", text="Время")
         self.tree.heading("Regessier", text="Режиссер")
-        self.tree.heading("Artist", text="Артисты")
+        self.tree.heading("Artist", text="Артисты в ролях")
         self.tree.pack()
 
     def open_dialog(self):  # Вызов дочернего окна
