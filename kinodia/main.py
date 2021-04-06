@@ -58,17 +58,38 @@ class Child(tk.Toplevel):  # Создадим дочернее окно для �
         self.entry_description.place(x=160, y=30)
         self.entry_description = ttk.Entry(self)
         #self.entry_description.place(x=160, y=50)
-        self.combobox = ttk.Combobox(self, values=[1900, 2000, 2001])
+        self.combobox = ttk.Combobox(self, values=["1900",
+        "1930",
+        "1950",
+        "1960",
+        "1970",
+        "1990",
+        "2001",
+        "2000",
+        "2010",
+        "2020",
+        "2015"])
         self.combobox.current(0)
         self.combobox.place(x=160, y=50)
         self.entry_description = ttk.Entry(self)
         #self.entry_description.place(x=160, y=70)
-        self.combobox = ttk.Combobox(self, values=["Драма", "Комедия", "Экшен", "Боевик", "Исторический", "Фантастика"])
+        self.combobox = ttk.Combobox(self, values=["Драма",
+        "Комедия",
+        "Экшен",
+        "Боевик",
+        "Исторический",
+        "Фантастика",
+        "Детский",
+        "Не Детский!"])
         self.combobox.current(0)
         self.combobox.place(x=160, y=70)
         self.entry_description = ttk.Entry(self)
         #self.entry_description.place(x=160, y=90)
-        self.combobox = ttk.Combobox(self, values=["90min", "120min", "140min", "180min", "360min"])
+        self.combobox = ttk.Combobox(self, values=["90min",
+        "120min",
+        "140min",
+        "180min",
+        "360min"])
         self.combobox.current(0)
         self.combobox.place(x=160, y=90)
         self.entry_description = ttk.Entry(self)
