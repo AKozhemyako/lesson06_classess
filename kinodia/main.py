@@ -1,5 +1,6 @@
 import tkinter as tk  # Импортируем Tkinter для нашего приложения
 from tkinter import ttk  # Добавим виджет для отображение базы данных превью
+import sqlite3
 import datetime as dt
 import data as data
 
@@ -115,18 +116,14 @@ class Child(tk.Toplevel):  # Создадим дочернее окно для �
         label_description.place(x=50, y=130)
         label_description = tk.Label(self, text='Сюжет фильма:')
         label_description.place(x=50, y=150)
-        #Добавляем кнопки управления
-        #btn_cancel = ttk.Button(self, text="Exit", command=self.desrtoy)  # Кнопка выхода
-        #btn_cancel.place(x=180, y=180)  # Координаты Кнопки выхода
-        #btn_ok = ttk.Button(self, text="Add")  # Кнопка ввода
-        #btn_ok.place(x=200, y=190)  # Координаты Кнопки ввода
-        #btn_ok.bind("<Button-1>")
-        btn_cancel = ttk.Button(self, text='Закрыть', command=self.destroy)
-        btn_cancel.place(x=290, y=210)
 
-        btn_ok = ttk.Button(self, text='Добавить')
-        btn_ok.place(x=290, y=240)
-        btn_ok.bind('<Button-1>')
+        #Добавляем кнопки управления
+        btn_cancel = ttk.Button(self, text='Закрыть', command=self.destroy)# Кнопка выхода
+        btn_cancel.place(x=290, y=210)# Координаты Кнопки выхода
+
+        btn_ok = ttk.Button(self, text='Добавить')# Кнопка ввода-сохранения данных
+        btn_ok.place(x=290, y=240)# Координаты Кнопки ввода
+        btn_ok.bind('<Button-1>') # Реакция на кнопку мышки
 
         self.grab_set()
         self.focus_set()
@@ -141,16 +138,3 @@ if __name__ == '__main__':
     root.geometry("750x550+400+300")  # Зададим размер окна и расположение на экране
     root.resizable(False, False)  # Отключаем изменение размеров основного окна программы
     root.mainloop()  # Запуск приложения.
-    years = [
-        "1900"
-        "1930"
-        "1950"
-        "1960"
-        "1970"
-        "1990"
-        "2000"
-        "2001"
-        "2010"
-        "2015"
-        "2020"
-    ]
