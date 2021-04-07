@@ -127,6 +127,15 @@ class Child(tk.Toplevel):  # Создадим дочернее окно для �
 
         self.grab_set()
         self.focus_set()
+#Создаем класс Базы Данных
+class DB:
+    def __init__(self):
+        self.conn = sqlite3.connect("films.db") # Создаем подключение к базе данных
+        self.c = self.conn.cursor() #Создаем курсор для взаимодействия с Базой
+        self.c.execute(
+            ''' CREATE TABLE IF NOT EXISTS films(
+            id integer primary key, film text, year integer, genre text, time integer, regissier text, artist text,)''')
+        self.conn.commit()
 
 
 
